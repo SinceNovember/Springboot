@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>userList</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body>
+<h1>用户列表</h1>
+
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th>Password</th>
+            <th>Age</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <td th:text="${users.id}"></td>
+        </tr>
+        </thead>
+        <tbody>
+      <!--<tr th:each="user:${users}">-->
+          <th scope="row" th:text="${users.id}">1</th>
+          <td th:text="${users.userName}">liu</td>
+          <td th:text="${users.password}">yu</td>
+          <td th:text="${users.age}">211</td>
+      <!--</tr>-->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
